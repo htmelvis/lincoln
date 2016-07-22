@@ -1,4 +1,6 @@
 import {inc, dec} from './actions';
+import './style/main.styl';
+
 
 window.onload = function() {
   let number = document.getElementById('number');
