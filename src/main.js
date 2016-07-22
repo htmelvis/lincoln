@@ -1,4 +1,5 @@
 import {inc, dec} from './actions';
+import $ from 'jquery';
 import './style/main.styl';
 
 

@@ -2,6 +2,7 @@
 // webpack and webpack-hot-middleware documentation
 var webpack = require('webpack');
 var path = require('path');
+var bootstrap = require('bootstrap-styl');
 
 module.exports = {
   debug: true,
@@ -19,7 +20,11 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+    })
   ],
 
   module: {
@@ -38,7 +43,21 @@ module.exports = {
       {
         test: /\.styl$/,
         loader: 'style-loader!css-loader!stylus-loader'
-      }
-    ]
+      },
+      {
+        test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$/,
+        loader: "file"
+      },
+      { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
+      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
+    ],
+    resolve: {
+      extensions: ['', '.styl', '.js']
+    }
+  },
+  stylus: {
+    use: [bootstrap()]
   }
 };
