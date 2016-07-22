@@ -6,12 +6,12 @@ To try this example, follow these 4 simple steps.
 
 **Step 1**: Clone this entire repo
 ```bash
-$ git clone https://github.com/Browsersync/recipes.git bs-recipes
+$ git clone https://github.com/htmelvis/jump-off-point.git new-site-name
 ```
 
 **Step 2**: Move into the directory containing this example
 ```bash
-$ cd bs-recipes/recipes/webpack.babel
+$ cd new-site-name
 ```
 
 **Step 3**: Install dependencies
