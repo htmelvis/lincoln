@@ -32,12 +32,13 @@ module.exports = {
       {
         loader: "babel-loader",
         // Only run `.js` and `.jsx` files through Babel
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         // Options to configure babel with
         query: {
+          cacheDirectory: true,
           plugins: ['transform-runtime'],
-          presets: ['es2015', 'stage-0'],
+          presets: ['es2015', 'stage-0', 'react'],
         }
       },
       {
