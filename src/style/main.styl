@@ -2,15 +2,7 @@
 // If you would like to override styles you must set vars first prior to loading BS
 // http://getbootstrap.com/customize/#less-variables is a list of the less-vars
 // Substitute a $ for the @ symbol in order to use in stylus
-
+@require 'vars';
 $icon-font-path = '~bootstrap-styl/fonts/';
-
 @import bootstrap;
-
-$background-color = #fff;
-$default-text-color = #1b1b1b;
-
-body{
-  background: $background-color;
-  color: $default-text-color;
-}
+@import 'base';

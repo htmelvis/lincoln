@@ -1,4 +1,3 @@
-# jump-off-point
+# Lincoln
 
-## Styling
-Stylus is used as the preprocessor for stylus files. They should be saved as styl files and all base .styl files should be loaded from the ```src/style``` directory.
+A Navigation Plugin based on Bootstrap 4 Dropdown. 
