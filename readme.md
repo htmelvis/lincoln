@@ -1,3 +1,2 @@
 # Lincoln
-
-A Navigation Plugin based on Bootstrap 4 Dropdown. 
+A Navigation Plugin based on Bootstrap 4 Dropdown.
